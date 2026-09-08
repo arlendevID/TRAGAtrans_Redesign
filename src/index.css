@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* TRAGA Brand Colors */
+  --color-traga-navy: #031952;
+  --color-traga-deep-blue: #0459BC;
+  --color-traga-blue: #0782DC;
+  --color-traga-cyan: #18B5F4;
+
+  /* TRANS Brand Colors */
+  --color-trans-yellow: #FDC606;
+  --color-trans-orange: #FDAB04;
+
+  /* Neutral Colors */
+  --color-traga-white: #FFFFFF;
+  --color-traga-gray: #D9DFE2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #ffffff;
+  color: #031952;
+}
+
+@keyframes marqueeLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee {
+  animation: marqueeLeft 28s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marqueeRight 28s linear infinite;
+}
